@@ -1,0 +1,8 @@
+{
+  "name": "betLeague",
+  "app_id": "0e2071e0",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
