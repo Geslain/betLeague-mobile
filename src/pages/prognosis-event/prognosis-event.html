@@ -15,28 +15,27 @@
 
 <ion-content padding>
   <form (ngSubmit)="submit()">
-  <ion-card class="cards">
-    <ion-list class="bet-list" *ngFor="let match of matches">
+  <ion-card *ngFor="let match of matches" class="cards">
+    <ion-list class="bet-list" >
       <ion-item class="match-date">
         <p>19/04/2018</p>
       </ion-item>
       <ion-grid class="first-grid">
         <ion-row class="bet">
           <ion-col class="team-name1">{{match.firstTeam.name}}</ion-col>
-          <ion-col class="hour"></ion-col>
           <ion-col class="team-name2">{{match.secondTeam.name}}</ion-col>
         </ion-row>
       </ion-grid>
       <ion-grid class="second-grid">
-        <ion-row class="firstTeam" text-center="">
-          <ion-col class="first-div">
+        <ion-row class="firstTeam" text-center>
+          <ion-col class="first-div" >
             <ion-col class="first-minus" (click)="decrement('first', match.id)">-</ion-col>
-            <ion-input class="first-bet-number" type="text" [(ngModel)]="match.firstTeamScore" name="firstTeamScore"></ion-input>
+            <ion-input text-center class="first-bet-number" type="text" [(ngModel)]="match.firstTeamScore" name="firstTeamScore"></ion-input>
             <ion-col class="first-plus" (click)="increment('first', match.id)">+</ion-col>
           </ion-col>
-          <ion-col class="second-div" float-right>
+          <ion-col class="second-div" >
             <ion-col class="second-minus" (click)="decrement('second', match.id)">-</ion-col>
-            <ion-input class="second-bet-number"  type="text" [(ngModel)]="match.secondTeamScore" name="secondTeamScore"></ion-input>
+            <ion-input text-center class="second-bet-number"  type="text" [(ngModel)]="match.secondTeamScore" name="secondTeamScore"></ion-input>
             <ion-col class="second-plus" (click)="increment('second', match.id)">+</ion-col>
           </ion-col>
         </ion-row>

@@ -8,9 +8,6 @@ page-prognosis-event {
     text-align: center;
     font-size: 12px;
     margin-bottom: 5px;
-    .hour {
-      background-color: #193C4F;
-    }
   }
 
   .match-date p {
@@ -29,18 +26,31 @@ page-prognosis-event {
     background-color: #59787F;
     text-align: center;
     padding: 5px 11px 5px 11px;
+    display: inline-block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
   }
 
   .first-plus, .second-plus {
     background-color: #59787F;
     text-align: center;
     padding: 5px 11px 5px 11px;
+    display: inline-block;
+    float: left;
+    width: 30px;
+    height: 30px;
   }
 
   .first-bet-number, .second-bet-number {
     background-color: #193C4F;
+    font-size: 12px;
     text-align: center;
-    padding: 5px 13px 5px 13px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    float: left;
   }
 
   .first-plus {
