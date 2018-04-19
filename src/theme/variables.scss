@@ -42,11 +42,23 @@ $colors: (
 );
 
 
+$first: #022740;
+$second: #0f2b46;
+$third: #171766;
+$fourth: #ac42cb;
+
+$background-color: #0C0B3F;
+$text-color: #FFF;
+
+$tabs-background: $third;
+$tabs-tab-color-active: $fourth;
+$tabs-tab-color-inactive: $text-color;
+$toolbar-background: $second;
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+$background-ios-color: #0C0B3F !default;
 
 
 // App Material Design Variables
@@ -54,11 +66,15 @@ $colors: (
 // Material Design only Sass variables can go here
 
 
+$background-md-color: #0C0B3F !default;
+$tabs-md-tab-color-inactive: #ffffff;
 
 
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
+
+
 
 
 

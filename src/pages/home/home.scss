@@ -1,3 +1,21 @@
 page-home {
+  .match {
+    .match-date,
+    .first-team,
+    .match-score,
+    .match-prognosis,
+    .second-team {
+      font-size: 13px;
+      text-align: center;
+    }
+  }
 
+  .win {
+    background-color: #91F0FF;
+  }
+
+  .lose {
+    background-color: #FF8358;
+  }
 }
+

@@ -1,17 +1,33 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+  <ion-segment>
+    <ion-segment-button value="solo">
+      Solo
+    </ion-segment-button>
+    <ion-segment-button value="friends">
+      Amis
+    </ion-segment-button>
+    <ion-segment-button value="pro">
+      Pro
+    </ion-segment-button>
+  </ion-segment>
+  <ion-list padding>
+    <ion-item *ngFor="let prognosis of prognosisList" class="match">
+      <ion-grid>
+        <ion-row align-items-end>
+          <ion-col class="match-date">{{prognosis.match.date}}</ion-col>
+          <ion-col class="first-team">{{prognosis.match.firstTeam.name}}</ion-col>
+          <ion-col class="match-score">{{prognosis.match.firstTeamScore}} - {{prognosis.match.secondTeamScore}}
+          </ion-col>
+          <ion-col class="match-prognosis win">{{prognosis.firstTeamPrognosis}} -
+            {{prognosis.secondTeamPrognosis}}
+          </ion-col>
+          <ion-col class="second-team">{{prognosis.match.secondTeam.name}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
 </ion-content>
