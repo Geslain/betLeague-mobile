@@ -19,7 +19,7 @@
   <ion-list padding>
     <ion-item *ngFor="let prognosis of prognosisList" class="match">
       <ion-grid>
-        <ion-row align-items-end>
+        <ion-row align-items-end (click)="seePrognosis(prognosis.id)">
           <ion-col class="match-date">{{prognosis.match.date}}</ion-col>
           <ion-col class="first-team">{{prognosis.match.firstTeam.name}}</ion-col>
           <ion-col class="match-score">{{prognosis.match.firstTeamScore}} - {{prognosis.match.secondTeamScore}}
