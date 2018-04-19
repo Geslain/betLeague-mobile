@@ -1,3 +1,68 @@
 page-teams {
+  .first-part p, .second-part p {
+    font-size: 10px;
+    color: #59787F;
+    margin-left: 10px;
+  }
 
+  .second-part p {
+    margin-top: 30px;
+  }
+
+  .first-card {
+    padding: 10px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 11px;
+  }
+  .create-team {
+    border-bottom: solid 1px #244A5B;
+    p {
+      color: #ffffff;
+      font-size: 11px;
+    }
+  }
+  .icon-add {
+    color: #39B54A;
+  }
+  .icon-people {
+    font-size: 35px;
+    border: solid 1px;
+    padding: 5px;
+  }
+  .team-list p {
+    font-size: 10px;
+    color: #59787F;
+    margin-top: 20px;
+  }
+  .team-name, .event-name {
+    font-size: 11px;
+  }
+
+  .team, .event {
+    text-align: center;
+    div {
+      margin-top: 8px;
+    }
+  }
+
+  .event {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    img {
+      margin: auto;
+    }
+  }
+
+  .img-mondial {
+    width: 50px;
+  }
+
+  .bet-button {
+    margin-top: 40px;
+    background-color: #39B54A;
+    font-size: 12px;
+  }
 }

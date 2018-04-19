@@ -43,22 +43,23 @@ $colors: (
 
 
 $first: #022740;
-$second: #0f2b46;
+$second: #39B54A;
 $third: #171766;
 $fourth: #ac42cb;
 
-$background-color: #0C0B3F;
+$background-color: #022740;
 $text-color: #FFF;
+$list-background-color: #133149;
 
 $tabs-background: $third;
-$tabs-tab-color-active: $fourth;
+$tabs-tab-color-active: $second;
 $tabs-tab-color-inactive: $text-color;
 $toolbar-background: $second;
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-$background-ios-color: #0C0B3F !default;
+$background-ios-color: $background-color !default;
 
 
 // App Material Design Variables
@@ -66,7 +67,7 @@ $background-ios-color: #0C0B3F !default;
 // Material Design only Sass variables can go here
 
 
-$background-md-color: #0C0B3F !default;
+$background-md-color: $background-color !default;
 $tabs-md-tab-color-inactive: #ffffff;
 
 

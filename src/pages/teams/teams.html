@@ -12,7 +12,52 @@
 
 </ion-header>
 
-
 <ion-content padding>
+  <div class="title">
+    PARIER EN EQUIPE
+  </div>
+
+  <div class="first-part">
+    <p>Choix de l'équipe</p>
+  </div>
+  <ion-card class="first-card">
+    <ion-item class="create-team">
+      <ion-icon name="ios-add-circle-outline" item-left small class="icon-add"></ion-icon>
+      <p>Créer une team</p>
+    </ion-item>
+    <ion-list class="team-list">
+      <p>Mes Teams</p>
+      <ion-grid>
+        <ion-row >
+          <ion-col
+            *ngFor="let team of teamList" class="team">
+            <ion-icon name="ios-people-outline" item-left class="icon-people"></ion-icon>
+            <div class="team-name">{{team.name}}</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </ion-card>
+
+  <div class="second-part">
+    <p>Choix de la compétition</p>
+  </div>
+  <ion-card class="second-card">
+    <ion-list class="event-list">
+      <ion-grid>
+        <ion-row >
+          <ion-col
+            *ngFor="let event of eventList" class="event">
+            <img src="assets/imgs/logo_mondial.png" class="img-mondial"/>
+            <div class="event-name">{{event.name}}</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </ion-card>
+
+  <div text-center>
+    <button ion-button class="bet-button">COMMENCER A PARIER</button>
+  </div>
 
 </ion-content>
