@@ -8,11 +8,12 @@ page-home {
       font-size: 11px;
       text-align: center;
     }
+    border-bottom: solid 1px #244A5B;
   }
 
   .win {
     background-color: #39B54A;
-    padding: 5px 15px 5px 15px;
+    padding: 3px 15px 3px 15px;
     color: #022740;
     font-weight: bold;
     width: 30px;
@@ -20,25 +21,32 @@ page-home {
 
   .lose {
     background-color: #FF8358;
-    padding: 5px 15px 5px 15px;
+    padding: 3px 15px 3px 15px;
     color: #022740;
     font-weight: bold;
-    width: 30px;
   }
 
   .match-score {
     background-color: #59787F;
-    padding: 5px 15px 5px 15px;
+    padding: 3px 15px 3px 15px;
   }
 
   .first-part p {
     font-size: 10px;
     color: #59787F;
     margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
   }
 
   .first-team, .second-team {
     width: 80px;
+  }
+
+  .event {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-top: 0px;
   }
 }
 
