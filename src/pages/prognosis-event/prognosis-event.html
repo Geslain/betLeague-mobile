@@ -30,14 +30,14 @@
       <ion-grid class="second-grid">
         <ion-row class="firstTeam" text-center="">
           <ion-col class="first-div">
-            <ion-col class="first-minus">-</ion-col>
-            <ion-input class="first-bet-number" type="text" [(ngModel)]="match.firstTeamScore" name="title"></ion-input>
-            <ion-col class="first-plus">+</ion-col>
+            <ion-col class="first-minus" (click)="decrement('first', match.id)">-</ion-col>
+            <ion-input class="first-bet-number" type="text" [(ngModel)]="match.firstTeamScore" name="firstTeamScore"></ion-input>
+            <ion-col class="first-plus" (click)="increment('first', match.id)">+</ion-col>
           </ion-col>
           <ion-col class="second-div" float-right>
-            <ion-col class="second-minus">-</ion-col>
-            <ion-input class="second-bet-number"  type="text" [(ngModel)]="match.firstTeamScore" name="title"></ion-input>
-            <ion-col class="second-plus">+</ion-col>
+            <ion-col class="second-minus" (click)="decrement('second', match.id)">-</ion-col>
+            <ion-input class="second-bet-number"  type="text" [(ngModel)]="match.secondTeamScore" name="secondTeamScore"></ion-input>
+            <ion-col class="second-plus" (click)="increment('second', match.id)">+</ion-col>
           </ion-col>
         </ion-row>
       </ion-grid>
