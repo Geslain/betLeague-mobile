@@ -1,0 +1,51 @@
+<!--
+  Generated template for the PrognosisEventPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>prognosisEvent</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card class="cards">
+    <ion-list class="bet-list">
+      <ion-item class="match-date">
+        <p>19/04/2018</p>
+      </ion-item>
+      <ion-grid class="first-grid">
+        <ion-row class="bet">
+          <ion-col class="team-name1">Russie</ion-col>
+          <ion-col class="hour">17:00</ion-col>
+          <ion-col class="team-name2">Arabie Saoudite</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid class="second-grid">
+        <ion-row class="firstTeam" text-center="">
+          <ion-col class="first-div">
+            <ion-col class="first-minus">-</ion-col>
+            <ion-col class="first-bet-number">1</ion-col>
+            <ion-col class="first-plus">+</ion-col>
+          </ion-col>
+          <ion-col class="second-div" float-right>
+            <ion-col class="second-minus">-</ion-col>
+            <ion-col class="second-bet-number">1</ion-col>
+            <ion-col class="second-plus">+</ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+    <img src="assets/imgs/pub.png" class="img-pub"/>
+  </ion-card>
+
+  <div text-center class="buttons">
+    <button ion-button class="button back" (click)="back()">RETOUR</button>
+    <button ion-button class="button validate">VALIDER</button>
+  </div>
+</ion-content>

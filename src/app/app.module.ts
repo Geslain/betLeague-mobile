@@ -14,6 +14,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {PodiumPage} from "../pages/podium/podium";
 import {PrognosisPage} from "../pages/prognosis/prognosis";
+import {PrognosisEventPage} from "../pages/prognosis-event/prognosis-event";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {PrognosisPage} from "../pages/prognosis/prognosis";
     HomePage,
     TabsPage,
     PodiumPage,
-    PrognosisPage
+    PrognosisPage,
+    PrognosisEventPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import {PrognosisPage} from "../pages/prognosis/prognosis";
     HomePage,
     TabsPage,
     PodiumPage,
-    PrognosisPage
+    PrognosisPage,
+    PrognosisEventPage
   ],
   providers: [
     StatusBar,

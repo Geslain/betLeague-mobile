@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {HttpClient} from "@angular/common/http";
+import {PrognosisPage} from "../prognosis/prognosis";
+import {PrognosisEventPage} from "../prognosis-event/prognosis-event";
 
 /**
  * Generated class for the TeamsPage page.
@@ -45,5 +47,11 @@ export class TeamsPage {
     this.http.get("https://betleague-api.herokuapp.com/event").subscribe((eventList) => {
       this.eventList = eventList;
     });
+  }
+
+  seeEventPrognosis(id) {
+    this.navCtrl.push(PrognosisEventPage, {
+      id,
+    })
   }
 }
