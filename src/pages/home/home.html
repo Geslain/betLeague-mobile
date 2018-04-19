@@ -16,21 +16,36 @@
     </ion-segment-button>
   </ion-segment>
 
-  <ion-list padding>
-    <ion-item *ngFor="let prognosis of prognosisList" class="match">
-      <ion-grid>
-        <ion-row align-items-end (click)="seePrognosis(prognosis.id)">
-          <ion-col class="match-date">{{prognosis.match.date}}</ion-col>
-          <ion-col class="first-team">{{prognosis.match.firstTeam.name}}</ion-col>
-          <ion-col class="match-score">{{prognosis.match.firstTeamScore}} - {{prognosis.match.secondTeamScore}}
-          </ion-col>
-          <ion-col class="match-prognosis win">{{prognosis.firstTeamPrognosis}} -
-            {{prognosis.secondTeamPrognosis}}
-          </ion-col>
-          <ion-col class="second-team">{{prognosis.match.secondTeam.name}}</ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-  </ion-list>
+  <div *ngFor="let matchDay of matchDayList" class="first-part">
+    <p>{{ matchDay.date }}</p>
+    <ion-card class="first-card">
+      <ion-list padding>
+        <ion-item *ngFor="let match of matchDay.matchList" class="match">
+          <ion-grid>
+            <ion-row align-items-center (click)="seePrognosis(match.id)">
+              <ion-col class="first-team">{{match.firstTeam.name}}</ion-col>
+              <ion-col *ngIf="match.firstTeamPrognosis; else blankScore">
+                <ion-col  *ngIf="isWinner(match.firstTeamScore, match.secondTeamScore,match.firstTeamPrognosis,match.secondTeamPrognosis); else loseFirst"
+                          class="match-prognosis win">{{match.firstTeamPrognosis}}</ion-col>
+                <ng-template #loseFirst>
+                <ion-col class="match-prognosis lose">{{match.firstTeamPrognosis}}</ion-col>
+                </ng-template>
+              </ion-col>
+              <ng-template #blankScore></ng-template>
+              <ion-col>
+                <ion-col class="match-score">{{match.firstTeamScore}} - {{match.secondTeamScore}}
+                </ion-col>
+              </ion-col>
+              <ion-col *ngIf="match.secondTeamPrognosis">
+                <ion-col *ngIf="isWinner(match.firstTeamScore, match.secondTeamScore,match.firstTeamPrognosis,match.secondTeamPrognosis); else loseFirst"
+                         class="match-prognosis win">{{match.secondTeamPrognosis}}</ion-col>
+              </ion-col>
+              <ion-col class="second-team">{{match.secondTeam.name}}</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </div>
 
 </ion-content>

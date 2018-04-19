@@ -8,7 +8,7 @@ import {PrognosisPage} from "../prognosis/prognosis";
   templateUrl: 'home.html'
 })
 export class HomePage {
-  private prognosisList: any;
+  private matchDayList: any;
   constructor(public navCtrl: NavController, private http: HttpClient) {
 
   }
@@ -21,8 +21,8 @@ export class HomePage {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
-    this.http.get("https://betleague-api.herokuapp.com/user/5ad855d18323a73338d4e50e/getDeepPrognosis").subscribe((prognosisList) => {
-      this.prognosisList = prognosisList;
+    this.http.get("https://betleague-api.herokuapp.com/user/5ad855d18323a73338d4e50e/getAllPrognosisMatches").subscribe((matchDayList) => {
+      this.matchDayList = matchDayList;
     });
   }
 
@@ -30,5 +30,20 @@ export class HomePage {
     this.navCtrl.push(PrognosisPage, {
       id,
     })
+  }
+
+  isWinner(firstTeamScore,secondTeamScore,firstPrognosis,secondPrognosis) {
+    let result;
+    let prognosisResult;
+
+    if(firstTeamScore === secondTeamScore ) result = "tie"
+    else if(firstTeamScore < secondTeamScore ) result = "second"
+    else result = "first"
+
+    if(firstPrognosis === secondPrognosis ) prognosisResult = "tie"
+    else if(firstPrognosis < secondPrognosis ) prognosisResult = "second"
+    else prognosisResult = "first"
+
+    return result === prognosisResult
   }
 }
