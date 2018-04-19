@@ -18,11 +18,12 @@
 
   <div *ngFor="let matchDay of matchDayList" class="first-part">
     <p>{{ matchDay.date }}</p>
+    <h1 class="event">COUPE DU MONDE 2018</h1>
     <ion-card class="first-card">
       <ion-list padding>
         <ion-item *ngFor="let match of matchDay.matchList" class="match">
           <ion-grid>
-            <ion-row align-items-center (click)="seePrognosis(match.id)">
+            <ion-row (click)="seePrognosis(match.id)">
               <ion-col class="first-team">{{match.firstTeam.name}}</ion-col>
               <ion-col *ngIf="match.firstTeamPrognosis; else blankScore">
                 <ion-col  *ngIf="isWinner(match.firstTeamScore, match.secondTeamScore,match.firstTeamPrognosis,match.secondTeamPrognosis); else loseFirst"
@@ -37,8 +38,11 @@
                 </ion-col>
               </ion-col>
               <ion-col *ngIf="match.secondTeamPrognosis">
-                <ion-col *ngIf="isWinner(match.firstTeamScore, match.secondTeamScore,match.firstTeamPrognosis,match.secondTeamPrognosis); else loseFirst"
+                <ion-col *ngIf="isWinner(match.firstTeamScore, match.secondTeamScore,match.firstTeamPrognosis,match.secondTeamPrognosis); else loseSecond"
                          class="match-prognosis win">{{match.secondTeamPrognosis}}</ion-col>
+                <ng-template #loseSecond>
+                  <ion-col class="match-prognosis lose">{{match.secondTeamPrognosis}}</ion-col>
+                </ng-template>
               </ion-col>
               <ion-col class="second-team">{{match.secondTeam.name}}</ion-col>
             </ion-row>
