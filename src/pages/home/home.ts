@@ -20,7 +20,7 @@ export class HomePage {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
-    this.http.get("http://localhost:1337/user/1/getDeepPrognosis").subscribe((prognosisList) => {
+    this.http.get("https://betleague-api.herokuapp.com/user/5ad855d18323a73338d4e50e/getDeepPrognosis").subscribe((prognosisList) => {
       this.prognosisList = prognosisList;
       console.log(this.prognosisList)
     });
