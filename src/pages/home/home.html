@@ -3,6 +3,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
+
   <ion-segment>
     <ion-segment-button value="solo">
       Solo
@@ -14,6 +15,7 @@
       Pro
     </ion-segment-button>
   </ion-segment>
+
   <ion-list padding>
     <ion-item *ngFor="let prognosis of prognosisList" class="match">
       <ion-grid>
@@ -30,4 +32,5 @@
       </ion-grid>
     </ion-item>
   </ion-list>
+
 </ion-content>
