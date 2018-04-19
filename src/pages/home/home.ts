@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {HttpClient} from "@angular/common/http";
+import {PrognosisPage} from "../prognosis/prognosis";
 
 @Component({
   selector: 'page-home',
@@ -22,7 +23,12 @@ export class HomePage {
 
     this.http.get("https://betleague-api.herokuapp.com/user/5ad855d18323a73338d4e50e/getDeepPrognosis").subscribe((prognosisList) => {
       this.prognosisList = prognosisList;
-      console.log(this.prognosisList)
     });
+  }
+
+  seePrognosis(id) {
+    this.navCtrl.push(PrognosisPage, {
+      id,
+    })
   }
 }
