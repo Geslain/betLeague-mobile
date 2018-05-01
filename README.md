@@ -37,11 +37,13 @@ ionic link
 
 4. When you're logged with github, select the proper repository (betleague-mobile) and use master branch (or don't if you want to specify a branch)
 
-5. Your are all good, you can now run :
+5. You are all good, you can now run :
 ```
 ionic serve -c
 ```
 If your are connected on the same network with the computer which serve the app and your phone, you can use the app "Ionic Dev App" to see the result on mobile
 
+## Deploy a build
 
+Follow this guide :  https://ionicframework.com/docs/pro/deploy/setup/
 
